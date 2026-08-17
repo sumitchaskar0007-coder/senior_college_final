@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import GalleryAdmin from './pages/admin/GalleryAdmin';
+import VideoAdmin from './pages/admin/VideoAdmin';
 import AnnouncementAdmin from './pages/admin/AnnouncementAdmin';
 import NoticeAdmin from './pages/admin/NoticeAdmin';
 import CareerAdmin from './pages/admin/CareerAdmin';
@@ -12,6 +13,7 @@ import BlogAdmin from './pages/admin/BlogAdmin';
 
 // Public Pages
 import Gallery from './pages/Gallery';
+import Video from './pages/Video';
 import Announcement from './pages/Announcement';
 import Notice from './pages/Notice';
 import Career from './pages/Career';
@@ -65,6 +67,7 @@ function App() {
           {/* ⭐ DYNAMIC PROGRAM ROUTE */}
           <Route path="/program/:slug" element={<ProgramRoute />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/videos" element={<Video />} />
           <Route path="/announcements" element={<Announcement />} />
           <Route path="/notices" element={<Notice />} />
           <Route path="/careers" element={<Career />} />
@@ -86,6 +89,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <GalleryAdmin />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/videos"
+            element={
+              <ProtectedRoute>
+                <VideoAdmin />
               </ProtectedRoute>
             }
           />

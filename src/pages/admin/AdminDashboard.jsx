@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   FiImage, 
+  FiVideo,
   FiBell, 
   FiFileText, 
   FiBriefcase, 
@@ -23,6 +24,7 @@ const AdminDashboard = () => {
 
   const menuItems = [
     { title: 'Gallery', icon: FiImage, path: '/admin/gallery', color: 'bg-purple-500' },
+    { title: 'Videos', icon: FiVideo, path: '/admin/videos', color: 'bg-indigo-500' },
     { title: 'Announcements', icon: FiBell, path: '/admin/announcements', color: 'bg-blue-500' },
     { title: 'Notices', icon: FiFileText, path: '/admin/notices', color: 'bg-green-500' },
     { title: 'Careers', icon: FiBriefcase, path: '/admin/careers', color: 'bg-yellow-500' },
